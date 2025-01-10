@@ -1,0 +1,131 @@
+.about {
+    padding: 0px 20px;
+
+}
+
+
+.about .wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 50px auto;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+}
+
+.about .wrapper:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+
+.about .wrapper .text {
+    flex: 1;
+    padding: 5px;
+}
+
+.about .wrapper .text h1 {
+    font-family: "Dancing Script", cursive;
+}
+
+.about .wrapper .text p {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 10px;
+    font-size: 1.2rem;
+    line-height: 25px;
+}
+
+.about .wrapper .text p::first-letter {
+    margin-left: 20px;
+}
+
+
+.about .wrapper .photo {
+    /* overflow: hidden;
+    border-radius: 10px; RESİM KENDİ İÇİNDE BÜYÜR*/
+
+    flex: 1;
+}
+
+
+.about .wrapper .photo img {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.about .wrapper .photo img:hover {
+    transform: scale(1.04);
+}
+
+
+/* bottom bar */
+.iletisimMail {
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0; /* Sayfanın en altına sabitler */
+    width: 100%; /* Tam genişlik */
+
+}
+
+/* scroll animation */
+.about .wrapper {
+    opacity: 0;
+    transition: all 0.5;
+}
+
+.about .wrapper.active {
+    opacity: 1;
+}
+
+.about .wrapper .text {
+    transform: translateX(-20px);
+    transition: all 0.5s;
+}
+
+.about .wrapper:nth-child(2n) .text {
+    transform: translateX(20px);
+}
+
+.about .wrapper.active .text {
+    transform: translateX(0px);
+}
+
+.iletisimMail {
+    opacity: 0;
+    transition: all 0.5s;
+}
+.iletisimMail.active {
+    opacity: 1;
+}
+
+
+.iletisimMail p:nth-child(1){
+    transform: translateX(-40px);
+    transition: all 0.5s;
+}
+.iletisimMail p:nth-child(2){
+    transform: translateX(-50px);
+    transition: all 0.8s;
+}
+.iletisimMail.active p{
+    transform: translateX(0px);
+}
+
+
+
+
+.about .wrapper .photo {
+    transform: translateX(20px);
+    transition: all 0.5s;
+}
+
+.about .wrapper:nth-child(2n) .photo {
+    transform: translateX(-20px);
+}
+
+.about .wrapper.active .photo {
+    transform: translateX(0px);
+}
